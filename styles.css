@@ -155,7 +155,7 @@ header {
 }
 
 /***** MAIN > PRESENTATION */
-.presentation, .hobbies, .experiences, .workXP, .contacts {
+.presentation, .hobbies, .portfolio, .experiences, .workXP, .contacts {
     background: var(--mainBGColor);
     height: auto;
     color: white;
@@ -163,6 +163,7 @@ header {
     padding: 5%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
     font-weight: lighter;
 }
@@ -263,18 +264,6 @@ header {
 }
 
 /* MAIN > PORTFOLIO */
-.portfolio {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: var(--mainBGColor);
-    height: auto;
-    color: white;
-    line-height: 160%;
-    padding: 5%;
-    font-weight: lighter;
-}
-
 .portfolio .portfolioTitle {
     text-align: right;
 }
