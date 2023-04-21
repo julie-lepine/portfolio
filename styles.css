@@ -155,7 +155,7 @@ header {
 }
 
 /***** MAIN > PRESENTATION */
-.presentation, .hobbies, .portfolio, .experiences, .workXP, .contacts {
+.presentation, .hobbies, .experiences, .workXP, .contacts {
     background: var(--mainBGColor);
     height: auto;
     color: white;
@@ -267,6 +267,12 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: var(--mainBGColor);
+    height: auto;
+    color: white;
+    line-height: 160%;
+    padding: 5%;
+    font-weight: lighter;
 }
 
 .portfolio .portfolioTitle {
