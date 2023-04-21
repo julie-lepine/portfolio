@@ -1,0 +1,328 @@
+:root {
+    --mainTitles : #ff66c4;
+    --mainBGColor : rgba(5, 5, 5, 0.978);
+    --scdBGColor : rgba(68, 68, 68, 0.978);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'roboto', sans-serif;
+    color: white;
+}
+
+header {
+    height: 100vh;
+    width: 100vw;
+    background: var(--mainBGColor);
+}
+
+/***** NAVBAR */
+.navbar {
+    position: absolute;
+    padding: 30px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.navbar a {
+    color: white;
+}
+
+.navbar .logo {
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'big shoulders display';
+    font-variant: small-caps;
+    color: var(--mainTitles);
+    text-shadow: 0 0 0.125em hsla(0, 0%, 100%, 0.3), 0 0 0.45em  currentColor;
+    position: fixed;
+}
+
+.navbar .navLinks ul {
+    display: flex;
+}
+
+.navbar .navLinks ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li.active a {
+    color: var(--mainTitles);
+    font-weight: 600;
+}
+
+/***** MENU ICON */
+.navbar .menuBtn {
+    display: none;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+}
+
+/***** NAVBAR RESPONSIVE */
+@media screen and (max-width:750px) {
+    .navbar {
+        padding: 0;
+    }
+
+    .navbar .navLinks {
+        position: absolute;
+        top: 0;
+        background-color: rgba(128, 128, 128, 0.41);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(6px);
+        margin-left: -100%;
+        transition: all 0.5s ease;
+    }
+
+    .navbar .navLinks.mobile-menu {
+        margin-left: 0;
+    }
+
+    .navbar .navLinks ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .navLinks ul li {
+        margin: 25px 0;
+        font-size: 1.2em;
+    }
+
+    .navbar .menuBtn {
+        display: block;
+    }
+
+    .navbar .logo {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+    }
+}
+
+/***** HEADER */
+header {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerTitle .headerMainTitle {
+    color: var(--mainTitles);
+    font-size: 2.5rem;
+}
+
+.headerTitle .headerSecondTitle {
+    font-variant: small-caps;
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+
+/* separators */
+.separator {
+    background:
+    linear-gradient(to left, var(--mainTitles) 0%, var(--mainBGColor) 100%)
+    no-repeat right;
+    background-size: 90% 5px;
+    padding: 5%;
+    background-color: var(--mainBGColor);
+}
+
+.separator2 {
+    background:
+    linear-gradient(to left, var(--mainBGColor) 0%, var(--mainTitles) 100%)
+    no-repeat right;
+    background-size: 90% 5px;
+    padding: 5%;
+    background-color: var(--mainBGColor);
+}
+
+/***** MAIN > PRESENTATION */
+.presentation, .hobbies, .portfolio, .experiences, .workXP, .contacts {
+    background: var(--mainBGColor);
+    height: auto;
+    color: white;
+    line-height: 160%;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: lighter;
+}
+
+/* titles */
+.presentation .presHeader .presHeaderTitle, .presMainAssets .presHeaderBox .presMainAssetsTitle, .hobbies .hobbiesHeaderBox .hobbiesTitle, .portfolio .portfolioHeaderBox .portfolioTitle, .experiences .expHeaderBox .expTitle, .workXP .workXPHeaderBox .workXPTitle, .contacts .contactsHeaderBox .contactsHeaderTitle {
+    margin: 5% 0 2% 0;
+    color: var(--mainTitles);
+}
+
+.titlesBar {
+    height: 2px;
+    background-color: var(--mainTitles);
+    margin: 5%;
+    width: 90vw;
+}
+
+/* presentation txt */
+.presentation .presHeader .presHeaderTxt {
+    text-align: center;
+}
+
+/* contact : img and btn */
+.presentation .presContact {
+    margin: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.presentation .presContactImgBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3rem;
+}
+
+.presentation .presContactImgBox .presContactImg {
+    height: 8rem;
+}
+
+.presentation .presContactImgBox p {
+    font-style: italic;
+    font-size: 0.8rem;
+}
+
+.presentation .presContactBtn {
+    color: var(--mainBGColor);
+    padding: 3% 5%;
+    background : var(--mainTitles);    
+    border-radius: 20px;
+    font-weight: bold;
+    min-width: 130px;
+    text-align: center;
+    border: 1px solid var(--mainBGColor);
+    transition: all 0.5s ease-in;
+}
+
+.presentation .presContactBtn:hover {
+    color: var(--mainTitles);
+    background-color: var(--mainBGColor);
+    border: 1px solid var(--mainTitles);
+    box-shadow: 0 0 0.125em hsla(0, 0%, 100%, 0.3), 0 0 0.45em  currentColor;
+}
+
+/* presentation : assets */
+.presMainAssetsTitle {
+    text-align: right;
+}
+
+.presMainAssetsAssets {
+    text-align: center;
+    margin-top: 5%;
+    font-size: 1.3rem;
+    font-variant: small-caps;
+}
+
+/* hobbies boxes */
+.hobbiesBoxes {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hobbiesBoxes .hobbiesBox {
+    border: 1px solid var(--mainTitles);
+    border-radius: 10px;
+    padding: 5%;
+    margin: 5%;
+    flex-wrap: wrap;
+    /* changer la width pour le responsive */
+    width: 100%;
+    text-align: center;
+}
+
+.hobbiesBoxes .hobbiesBox:hover {
+    box-shadow: 0 0 0.2em var(--mainTitles), 0 0 0.45em  currentColor;
+}
+
+/* MAIN > PORTFOLIO */
+.portfolio .portfolioTitle {
+    text-align: right;
+}
+
+/* portfolio boxes */
+.portfolio .portfolioXPs .portfolioXP {
+    margin: 10% 0;
+}
+
+.portfolio .portfolioXPs .portfolioXP .portfolioXPContent img {
+    border-radius: 10px;
+}
+
+.portfolio .portfolioXPs .portfolioXP .portfolioXPLangages {
+    color: var(--mainTitles);
+    font-weight: bold;
+    margin: 2%;
+    font-size: 0.8rem;
+}
+
+/* MAIN > EXPERIENCES */
+.experiences .xps .xpBox .xpTitle {
+    background:
+    linear-gradient(to left, var(--mainBGColor) 0%, var(--mainBGColor) 30%, var(--mainTitles) 100%);
+    padding: 1% 0;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.experiences .xps .xpBox .xpTitle2 {
+    background:
+    linear-gradient(to left, var(--mainTitles) 0%, var(--mainTitles) 30%, var(--mainBGColor) 100%);
+    padding: 1% 0;
+    border-radius: 2px;
+    text-align: center;
+}
+
+.experiences .xps .xpBox .xpTime {
+    font-variant: small-caps;
+    font-style: italic;
+    margin: 2% 2% 2% 5%;
+    color: var(--mainTitles);
+    font-size: 0.9rem;
+}
+
+.workXPTitle {
+    text-align: right;
+}
+
+/* FOOTER > CONTACTS */
+footer .contacts .contactsBoxes {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+footer .contacts .contactsBoxes .contactBox .contactImg {
+    height: 6rem;
+    transition: all 1s ease;
+}
+
+footer .contacts .contactsBoxes .contactBox .contactImg:hover {
+    transform: scale(1.1);
+}
