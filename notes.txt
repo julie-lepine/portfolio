@@ -1,8 +1,5 @@
 - menu : changer la classe active en fonction de là où on a cliqué
 - presHeaderTxt : écrire
-- borders en-dessous des titres
-- ajouter des effets hover, des animations css
-- ajouter apparaition box au scroll
 - responsive ordi (noamment hobbies et portfolio pour autre que pour tel) - body width de 60% par ex
-- portfolioXPContent : gif du site
 - ajouter emojis 
+- PORTFOLIO PAS CENTRE PUTAIN

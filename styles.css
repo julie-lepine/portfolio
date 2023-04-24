@@ -1,7 +1,7 @@
 :root {
-    --mainTitles : #ff66c4;
-    --mainBGColor : rgba(5, 5, 5, 0.978);
-    --scdBGColor : rgba(68, 68, 68, 0.978);
+    --mainTitles: #ff66c4;
+    --mainBGColor: rgba(5, 5, 5, 0.978);
+    --scdBGColor: rgba(68, 68, 68, 0.978);
 }
 
 * {
@@ -41,8 +41,7 @@ header {
     font-family: 'big shoulders display';
     font-variant: small-caps;
     color: var(--mainTitles);
-    text-shadow: 0 0 0.125em hsla(0, 0%, 100%, 0.3), 0 0 0.45em  currentColor;
-    position: fixed;
+    text-shadow: 0 0 0.125em hsla(0, 0%, 100%, 0.3), 0 0 0.45em currentColor;
 }
 
 .navbar .navLinks ul {
@@ -53,9 +52,9 @@ header {
     margin: 0 15px;
 }
 
-.navbar ul li.active a {
-    color: var(--mainTitles);
-    font-weight: 600;
+.navbar .navLinks ul li:hover {
+    transform: scale(1.15);
+    transition: all 0.5s ease-in;
 }
 
 /***** MENU ICON */
@@ -112,6 +111,7 @@ header {
         position: absolute;
         top: 30px;
         left: 30px;
+        position: fixed;
     }
 }
 
@@ -138,8 +138,7 @@ header {
 /* separators */
 .separator {
     background:
-    linear-gradient(to left, var(--mainTitles) 0%, var(--mainBGColor) 100%)
-    no-repeat right;
+        linear-gradient(to left, var(--mainTitles) 0%, var(--mainBGColor) 100%) no-repeat right;
     background-size: 90% 5px;
     padding: 5%;
     background-color: var(--mainBGColor);
@@ -147,15 +146,19 @@ header {
 
 .separator2 {
     background:
-    linear-gradient(to left, var(--mainBGColor) 0%, var(--mainTitles) 100%)
-    no-repeat right;
+        linear-gradient(to left, var(--mainBGColor) 0%, var(--mainTitles) 100%) no-repeat right;
     background-size: 90% 5px;
     padding: 5%;
     background-color: var(--mainBGColor);
 }
 
 /***** MAIN > PRESENTATION */
-.presentation, .hobbies, .portfolio, .experiences, .workXP, .contacts {
+.presentation,
+.hobbies,
+.portfolio,
+.experiences,
+.workXP,
+.contacts {
     background: var(--mainBGColor);
     height: auto;
     color: white;
@@ -169,7 +172,13 @@ header {
 }
 
 /* titles */
-.presentation .presHeader .presHeaderTitle, .presMainAssets .presHeaderBox .presMainAssetsTitle, .hobbies .hobbiesHeaderBox .hobbiesTitle, .portfolio .portfolioHeaderBox .portfolioTitle, .experiences .expHeaderBox .expTitle, .workXP .workXPHeaderBox .workXPTitle, .contacts .contactsHeaderBox .contactsHeaderTitle {
+.presentation .presHeader .presHeaderTitle,
+.presMainAssets .presHeaderBox .presMainAssetsTitle,
+.hobbies .hobbiesHeaderBox .hobbiesTitle,
+.portfolio .portfolioHeaderBox .portfolioTitle,
+.experiences .expHeaderBox .expTitle,
+.workXP .workXPHeaderBox .workXPTitle,
+.contacts .contactsHeaderBox .contactsHeaderTitle {
     margin: 5% 0 2% 0;
     color: var(--mainTitles);
 }
@@ -214,7 +223,7 @@ header {
 .presentation .presContactBtn {
     color: var(--mainBGColor);
     padding: 3% 5%;
-    background : var(--mainTitles);    
+    background: var(--mainTitles);
     border-radius: 20px;
     font-weight: bold;
     min-width: 130px;
@@ -227,7 +236,7 @@ header {
     color: var(--mainTitles);
     background-color: var(--mainBGColor);
     border: 1px solid var(--mainTitles);
-    box-shadow: 0 0 0.125em hsla(0, 0%, 100%, 0.3), 0 0 0.45em  currentColor;
+    box-shadow: 0 0 0.125em hsla(0, 0%, 100%, 0.3), 0 0 0.45em currentColor;
 }
 
 /* presentation : assets */
@@ -242,8 +251,7 @@ header {
     font-variant: small-caps;
 }
 
-/* hobbies boxes */
-.hobbiesBoxes {
+n .hobbiesBoxes {
     display: flex;
     flex-wrap: wrap;
 }
@@ -260,7 +268,7 @@ header {
 }
 
 .hobbiesBoxes .hobbiesBox:hover {
-    box-shadow: 0 0 0.2em var(--mainTitles), 0 0 0.45em  currentColor;
+    box-shadow: 0 0 0.2em var(--mainTitles), 0 0 0.45em currentColor;
 }
 
 /* MAIN > PORTFOLIO */
@@ -275,6 +283,7 @@ header {
 
 .portfolio .portfolioXPs .portfolioXP .portfolioXPContent img {
     border-radius: 10px;
+    max-width: 100%;
 }
 
 .portfolio .portfolioXPs .portfolioXP .portfolioXPLangages {
@@ -286,16 +295,14 @@ header {
 
 /* MAIN > EXPERIENCES */
 .experiences .xps .xpBox .xpTitle {
-    background:
-    linear-gradient(to left, var(--mainBGColor) 0%, var(--mainBGColor) 30%, var(--mainTitles) 100%);
+    background: linear-gradient(to left, var(--mainBGColor) 0%, var(--mainBGColor) 30%, var(--mainTitles) 100%);
     padding: 1% 0;
     border-radius: 5px;
     text-align: center;
 }
 
 .experiences .xps .xpBox .xpTitle2 {
-    background:
-    linear-gradient(to left, var(--mainTitles) 0%, var(--mainTitles) 30%, var(--mainBGColor) 100%);
+    background: linear-gradient(to left, var(--mainTitles) 0%, var(--mainTitles) 30%, var(--mainBGColor) 100%);
     padding: 1% 0;
     border-radius: 2px;
     text-align: center;
@@ -318,7 +325,9 @@ footer .contacts .contactsBoxes {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    width: 100%;
 }
+
 footer .contacts .contactsBoxes .contactBox .contactImg {
     height: 6rem;
     transition: all 1s ease;
@@ -326,4 +335,18 @@ footer .contacts .contactsBoxes .contactBox .contactImg {
 
 footer .contacts .contactsBoxes .contactBox .contactImg:hover {
     transform: scale(1.1);
+}
+
+/* BOUTON RETOUR EN HAUT DE PAGE */
+.up {
+    width: 8%;
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    animation: forwards;
+}
+
+.up:hover {
+    transform: scale(1.2);
+    transition: 0.5s;
 }
