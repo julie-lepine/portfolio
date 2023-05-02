@@ -13,12 +13,6 @@
     color: white;
 }
 
-header {
-    height: 100vh;
-    width: 100vw;
-    background: var(--mainBGColor);
-}
-
 /********** NAVBAR */
 .navbar {
     position: absolute;
@@ -106,22 +100,18 @@ header {
     .navbar .menuBtn {
         display: block;
     }
-
-    .navbar .logo {
-        position: absolute;
-        top: 30px;
-        left: 30px;
-        position: fixed;
-    }
 }
 
 /********** HEADER */
 header {
-    height: 100vh;
-    width: 100vw;
+    height: 87svh;
+    width: 100svw;
+    background: var(--mainBGColor);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 10svh;
 }
 
 .headerTitle .headerMainTitle {
@@ -153,9 +143,13 @@ header {
 }
 
 /********** MAIN > PRESENTATION */
-.presentation, .hobbies, .portfolio, .experiences, .workXP, .contacts {
+.presentation,
+.hobbies,
+.portfolio,
+.experiences,
+.workXP,
+.contacts {
     background-color: var(--mainBGColor);
-    height: auto;
     color: white;
     line-height: 160%;
     padding: 5%;
@@ -174,7 +168,7 @@ header {
 .experiences .expHeaderBox .expTitle,
 .workXP .workXPHeaderBox .workXPTitle,
 .contacts .contactsHeaderBox .contactsHeaderTitle {
-    margin: 5% 0 2% 0;
+    margin: 10% 0 5% 0;
     color: var(--mainTitles);
 }
 
@@ -264,6 +258,7 @@ header {
     grid-template-areas: "one" "two" "three" "four";
     gap: 5%;
     width: 90%;
+    height: 50vh;
 }
 
 .hobbiesBox1 {
@@ -285,7 +280,7 @@ header {
 .hobbiesBoxes .hobbiesBox {
     border: 1px solid var(--mainTitles);
     border-radius: 10px;
-    padding: 5%;
+    padding: 3%;
     margin: 5%;
     text-align: center;
 }
@@ -300,16 +295,13 @@ header {
 }
 
 /* portfolio boxes */
-.xps {
-    width: 80%;
-}
-
 .portfolio .portfolioXPs {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: "a" "b" "c" "d" "e" "f";
-    gap: 5%;
+    margin-top: 5%;
+    gap: 2%;
 }
 
 .portfolioXP1 {
@@ -318,6 +310,10 @@ header {
 
 .portfolioXP2 {
     grid-area: "b";
+}
+
+.portfolioXP2 .portfolioXPContent img {
+    border: 1px solid var(--mainTitles);
 }
 
 .portfolioXP3 {
@@ -334,10 +330,6 @@ header {
 
 .portfolioXP6 {
     grid-area: "f";
-}
-
-.portfolio .portfolioXPs .portfolioXP {
-    margin: 10% 0;
 }
 
 .portfolio .portfolioXPs .portfolioXP .portfolioXPContent {
@@ -357,6 +349,11 @@ header {
 }
 
 /* MAIN > EXPERIENCES */
+.xps {
+    width: 80%;
+    margin-top: 5%;
+}
+
 .experiences .xps .xpBox .xpTitle {
     background: linear-gradient(to left, var(--mainBGColor) 0%, var(--mainBGColor) 30%, var(--mainTitles) 100%);
     padding: 1%;
@@ -385,7 +382,7 @@ header {
 
 .workXP p {
     text-align: center;
-    margin: 0 5%;
+    margin: 5% 0 0;
 }
 
 /********** FOOTER > CONTACTS */
@@ -394,6 +391,7 @@ footer .contacts .contactsBoxes {
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
+    margin-top: 5%;
 }
 
 footer .contacts .contactsBoxes .contactBox .contactImg {
@@ -430,21 +428,31 @@ footer .contacts .contactsBoxes .contactBox .contactImg:hover {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         grid-template-areas: "one two" "three four";
+        height: fit-content;
     }
+
+    .hobbiesBox {
+        height: 10svh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* titles */
+    .presentation .presHeader .presHeaderTitle,
+    .presMainAssets .presMainAssetsBox .presMainAssetsTitle,
+    .hobbies .hobbiesHeaderBox .hobbiesTitle,
+    .portfolio .portfolioHeaderBox .portfolioTitle,
+    .experiences .expHeaderBox .expTitle,
+    .workXP .workXPHeaderBox .workXPTitle,
+    .contacts .contactsHeaderBox .contactsHeaderTitle {
+        margin: 5% 0 3% 0;
+    }
+
 }
 
 /* md */
 @media screen and (min-width: 768px) {
-    header {
-        height: 50vh;
-    }
-
-    .portfolio .portfolioXPs {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas: "a b" "c d" "e f";
-    }
-
     .portfolio .portfolioXPs .portfolioXP {
         display: flex;
         flex-direction: column;
@@ -458,14 +466,29 @@ footer .contacts .contactsBoxes .contactBox .contactImg:hover {
 }
 
 /* lg */
+@media screen and (min-width: 1050px) {
+    .portfolio .portfolioXPs {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "a b" "c d" "e f";
+    }
+}
+
+/* xl */
 @media screen and (min-width: 1312px) {
-    .navbar, header, .presHeader, .navbar, main, footer {
+
+    .navbar,
+    header,
+    .presHeader,
+    .navbar,
+    main,
+    footer {
         width: 65%;
         margin: 0 auto;
     }
 
     .navbar {
-        position: static;
+        position: sticky;
     }
 
     html {
@@ -474,5 +497,14 @@ footer .contacts .contactsBoxes .contactBox .contactImg:hover {
 
     .up {
         width: 5%;
+    }
+
+    .presentation,
+    .hobbies,
+    .portfolio,
+    .experiences,
+    .workXP,
+    .contacts {
+        padding: 2%;
     }
 }
