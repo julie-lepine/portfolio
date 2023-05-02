@@ -38,7 +38,6 @@
     text-shadow: 0 0 0.125em hsla(0, 0%, 100%, 0.3), 0 0 0.45em currentColor;
     top: 30px;
     left: 30px;
-    position: absolute;
 }
 
 .navbar .navLinks ul {
@@ -107,7 +106,7 @@
 
 /********** HEADER */
 header {
-    height: 100vh;
+    height: 85vh;
     width: 100vw;
     background: var(--mainBGColor);
     display: flex;
@@ -523,6 +522,7 @@ footer .contacts .contactsBoxes .contactBox .contactImg:hover {
     .navbar {
         position: sticky;
         background-color: var(--mainBGColor);
+        padding: 2%;
     }
 
     html {
