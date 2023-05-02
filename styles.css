@@ -16,7 +16,7 @@
 /********** NAVBAR */
 .navbar {
     position: absolute;
-    padding: 30px;
+    padding: 5%;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -36,6 +36,9 @@
     font-variant: small-caps;
     color: var(--mainTitles);
     text-shadow: 0 0 0.125em hsla(0, 0%, 100%, 0.3), 0 0 0.45em currentColor;
+    top: 30px;
+    left: 30px;
+    position: absolute;
 }
 
 .navbar .navLinks ul {
@@ -104,14 +107,14 @@
 
 /********** HEADER */
 header {
-    height: 87svh;
-    width: 100svw;
+    height: 100vh;
+    width: 100vw;
     background: var(--mainBGColor);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10svh;
+    gap: 10vh;
 }
 
 .headerTitle .headerMainTitle {
@@ -123,6 +126,13 @@ header {
     font-variant: small-caps;
     font-size: 1.5rem;
     font-weight: lighter;
+}
+
+/* header button - get down to the site */
+.headerDownBtn:hover {
+    box-shadow : 0 0 0.125em hsla(0, 0%, 100%, 0.3), 0 0 0.45em var(--mainTitles);
+    transform: scale(1.2);
+    transition: all 1s ease-in-out;
 }
 
 /* separators */
@@ -257,6 +267,10 @@ header {
     margin-top: 10%;
 }
 
+.presMainAssetsWebAssets:hover {
+    opacity: 0.5;
+}
+
 /* MAIN > HOBBIES */
 .hobbiesBoxes {
     display: grid;
@@ -309,6 +323,10 @@ header {
     grid-template-areas: "a" "b" "c" "d" "e" "f";
     margin-top: 5%;
     gap: 2%;
+}
+
+.portfolioXP:hover {
+    opacity: 0.5;
 }
 
 .portfolioXP1 {
@@ -439,7 +457,7 @@ footer .contacts .contactsBoxes .contactBox .contactImg:hover {
     }
 
     .hobbiesBox {
-        height: 10svh;
+        height: 10vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -522,5 +540,17 @@ footer .contacts .contactsBoxes .contactBox .contactImg:hover {
     .workXP,
     .contacts {
         padding: 2%;
+    }
+
+    .headerTitle .headerMainTitle {
+        font-size: 3rem;
+    }
+
+    .presMainAssetsWebUl {
+        gap: 6%;
+    }
+
+    .presMainAssetsWebAssets {
+        margin: 4%;
     }
 }
