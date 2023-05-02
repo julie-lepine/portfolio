@@ -250,6 +250,13 @@ header {
     font-variant: small-caps;
 }
 
+/* presentation : web assets */
+.presMainAssetsWebUl {
+    text-align: center;
+    gap: 5%;
+    margin-top: 10%;
+}
+
 /* MAIN > HOBBIES */
 .hobbiesBoxes {
     display: grid;
@@ -463,6 +470,14 @@ footer .contacts .contactsBoxes .contactBox .contactImg:hover {
     .up {
         width: 8%;
     }
+
+    .presMainAssetsWebUl {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5%;
+    }
 }
 
 /* lg */
@@ -489,10 +504,11 @@ footer .contacts .contactsBoxes .contactBox .contactImg:hover {
 
     .navbar {
         position: sticky;
+        background-color: var(--mainBGColor);
     }
 
     html {
-        background-color: var(--mainBGColor);
+        background-color: hsla(0, 0%, 2%, 0.97);
     }
 
     .up {
