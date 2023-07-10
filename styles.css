@@ -126,6 +126,18 @@ header {
   font-weight: lighter;
 }
 
+.headerContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+}
+
+.headerContent .ITcat {
+    width: 25vh;
+    margin: 3vh 0;
+}
+
 /* header button - get down to the site */
 .headerDownBtn:hover {
   box-shadow: 0 0 0.125em hsla(0, 0%, 100%, 0.3), 0 0 0.45em var(--mainTxtColor);
@@ -285,10 +297,18 @@ header {
   padding: 2vh;
   margin: 2vh;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3vh;
 }
 
 .hobbiesBoxes .hobbiesBox:hover {
   box-shadow: 0 0 0.2em var(--mainTxtColor), 0 0 0.45em currentColor;
+}
+
+.hobbiesBoxes .hobbiesBox .hobbiesBoxesIcons {
+    height: 3vh;
 }
 
 /* MAIN > PORTFOLIO */
@@ -437,6 +457,11 @@ footer .contacts .contactsBoxes .contactBox .contactImg:hover {
   transition: 0.5s;
 }
 
+/* hidden stuffs */ 
+.hidden {
+    display: none; 
+}
+
 /********** RESPONSIVE */
 /* sm */
 @media screen and (max-width: 768px) {
@@ -504,6 +529,11 @@ footer .contacts .contactsBoxes .contactBox .contactImg:hover {
   .workXP p {
     margin: 5% 20% 0 20%;
   }
+
+  /* hidden stuffs */ 
+.hidden {
+    display: block; 
+}
 }
 
 /* xl */
