@@ -342,10 +342,6 @@ header {
   grid-area: "b";
 }
 
-.portfolioXP2 .portfolioXPContent img {
-  border: 1px solid var(--mainTxtColor);
-}
-
 .portfolioXP3 {
   grid-area: "c";
 }
