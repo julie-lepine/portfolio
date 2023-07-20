@@ -223,6 +223,12 @@ header {
   font-size: 0.8rem;
 }
 
+.presentation .presContactsBtnsDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
 .presentation .presContactBtn {
   color: var(--mainBGColor);
   padding: 3% 5%;
@@ -233,6 +239,7 @@ header {
   text-align: center;
   border: 1px solid var(--mainBGColor);
   transition: all 0.5s ease-in;
+  padding: 1vh;
 }
 
 .presentation .presContactBtn:hover {
@@ -520,6 +527,11 @@ footer .contacts .contactsBoxes .contactBox .contactImg:hover {
 
   .portfolio {
     padding: 1vh 0;
+  }
+
+  .presentation .presHeader .presHeaderTxt {
+    width: 70%;
+    margin: 0 auto;
   }
 
   .workXP p {
