@@ -339,6 +339,7 @@ header {
 
 .portfolioXP:hover {
   opacity: 0.5;
+  transform: scale(1.02);
 }
 
 .portfolioXP1 {
